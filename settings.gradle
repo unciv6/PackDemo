@@ -1,0 +1,21 @@
+ext.withOne = true
+ext.withSec = true
+def personalPropertiesFile = new File("gradle.properties")
+if (personalPropertiesFile.exists()) {
+    def personalProperties = new Properties()
+    personalProperties.load(new FileInputStream(personalPropertiesFile))
+    if (personalProperties.containsKey("withpackone")) {
+        ext.withOne = personalProperties.getProperty("withpackone").toBoolean()
+    }
+    if (personalProperties.containsKey("withpacksec")) {
+        ext.withSec = personalProperties.getProperty("withpacksec").toBoolean()
+    }
+}
+if (ext.withOne) {
+    include ':one'
+}
+if (ext.withSec) {
+    include ':sec'
+}
+include ':app'
+rootProject.name = "PackDemo"
