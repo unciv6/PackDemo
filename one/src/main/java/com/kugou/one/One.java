@@ -2,7 +2,9 @@ package com.kugou.one;
 
 import android.util.Log;
 
-public class One {
+import com.peak.third.Common;
+
+public class One implements Common {
     private static final String TAG = "test_one";
 
     public One() {

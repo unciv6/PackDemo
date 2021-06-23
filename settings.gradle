@@ -1,3 +1,4 @@
+include ':third'
 ext.withOne = true
 ext.withSec = true
 def personalPropertiesFile = new File("gradle.properties")

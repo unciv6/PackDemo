@@ -2,7 +2,9 @@ package com.kugou.sec;
 
 import android.util.Log;
 
-public class Sec {
+import com.peak.third.Common;
+
+public class Sec implements Common {
     private static final String TAG = "test_sec";
 
     public Sec() {
